@@ -50,4 +50,4 @@ jobs:
         id: Deploy
         if: GitHub.event_name == 'push'
         run: 
-          node_modules/sfdx-cli/bin/run force:source:deploy -p diffdeploy/src -u LRQA --json --loglevel fatal
+          node_modules/sfdx-cli/bin/run force:source:deploy -p src -u LRQA --json --loglevel fatal
