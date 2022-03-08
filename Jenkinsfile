@@ -10,7 +10,7 @@ node {
     def SF_INSTANCE_URL = "https://login.salesforce.com"
 
 
-    def toolbelt = tool 'toolbelt'
+   // def toolbelt = tool 'toolbelt'
 
 	println SF_CONSUMER_KEY
 	println SF_USERNAME
