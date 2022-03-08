@@ -41,7 +41,7 @@ node {
 		// -------------------------------------------------------------------------
 
 		stage('Authorize to Salesforce') {
-			rc = command "${toolbelt}/sfdx auth:jwt:grant --instanceurl ${SF_INSTANCE_URL} --clientid ${SF_CONSUMER_KEY} --jwtkeyfile C:/\Users/\jai/\Downloads/\openssl/\bin/\server.key --username ${SF_USERNAME} --setalias UAT"
+			rc = command "${toolbelt}/sfdx auth:jwt:grant --instanceurl ${SF_INSTANCE_URL} --clientid ${SF_CONSUMER_KEY} --jwtkeyfile C:\\Users\\jai\\Downloads\\openssl\\bin\\server.key --username ${SF_USERNAME} --setalias UAT"
 		    if (rc != 0) {
 			error 'Salesforce org authorization failed.'
 		    }
