@@ -46,10 +46,6 @@ jobs:
       - name: 'Authentication against dev org'
         run: node_modules/sfdx-cli/bin/run force:auth:sfdxurl:store -f SFDX_QA -s -a LRQA
         
-      - name: Run Apex test
-        run: 
-          node_modules/sfdx-cli/bin/run force:apex:test:run --resultformat tap --codecoverage -c -r human
-        
       - name: Deploy source
         id: Deploy
         if: GitHub.event_name == 'push'
